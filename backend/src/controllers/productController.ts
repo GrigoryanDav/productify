@@ -128,7 +128,7 @@ export const deleteProduct = async (req: Request<Params>, res: Response) => {
         };
 
         await queries.deleteProduct(id);
-        res.status(204).json({ message: "Product deleted successfully" });
+        res.status(200).json({ message: "Product deleted successfully" });
     } catch (error) {
         console.error("Error deleting product:", error);
         res.status(500).json({ error: "An error occurred while deleting the product" });
